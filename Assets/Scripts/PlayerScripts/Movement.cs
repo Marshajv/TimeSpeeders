@@ -22,11 +22,12 @@ public class Movement : MonoBehaviour {
 	void Update () {
         ConstantMovement();
 		Jump();
-	    float translation=Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        float rotation = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
+	    float translationV=Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        float translationH = Input.GetAxis("Horizontal") * -speed * Time.deltaTime;
+        //  float rotation = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
 
-        transform.Translate(0, translation, 0);
-        transform.Rotate(0, 0, rotation);
+        transform.Translate(translationH, translationV, 0);
+      //  transform.Rotate(0, 0, rotation);
 
         transform.position = new Vector3((Mathf.Clamp(transform.position.x, clampPositionYMin, clampPositionYMax)), transform.position.y, (Mathf.Clamp(transform.position.z, clampPositionZMin, clampPositionZMax)));
 	}
