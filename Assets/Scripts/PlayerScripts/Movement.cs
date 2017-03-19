@@ -5,28 +5,39 @@ public class Movement : MonoBehaviour {
     public float constSpeed;
     public float speed;
     public float rotationSpeed;
+	public float fireRate;
+
+	private float nextFire;
+
+	public Transform shotSpawn;
 
     public float clampPositionYMin;
     public float clampPositionYMax;
     public float clampPositionZMin;
     public float clampPositionZMax;
 
+	public float shotSpeed;
     public float jumpForce;
     public float jumpTime;
     public bool isGrounded;
 
+	private GameObject bullet;
+
     public Rigidbody myRigidbody;
+
 	void Start () {
 	
 	}
 	void Update () {
         ConstantMovement();
 		Jump();
-	    float translationV=Input.GetAxis("Vertical") * speed * Time.deltaTime;
+		Shooting ();
+	    //float translationV=Input.GetAxis("Vertical") * speed * Time.deltaTime;
         float translationH = Input.GetAxis("Horizontal") * -speed * Time.deltaTime;
         //  float rotation = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
 
-        transform.Translate(translationH, translationV, 0);
+		transform.Translate (translationH, 0, 0);
+      // transform.Translate(translationH, translationV, 0);
       //  transform.Rotate(0, 0, rotation);
 
         transform.position = new Vector3((Mathf.Clamp(transform.position.x, clampPositionYMin, clampPositionYMax)), transform.position.y, (Mathf.Clamp(transform.position.z, clampPositionZMin, clampPositionZMax)));
@@ -42,13 +53,16 @@ public class Movement : MonoBehaviour {
             isGrounded = false;
             Debug.Log ("jumps");
             myRigidbody.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
-            //transform.Translate (Vector3.up*jumpForce*Time.deltaTime);
-			//Vector3 up = transform.TransformDirection (Vector3.up);
-			//myRigidbody.AddForce (up * 5, ForceMode.Impulse);
-		//} else if (isGrounded == false) {
 			StartCoroutine(JumpWait ());
 		}			
 	}
+	public void Shooting(){
+		if (Input.GetButtonDown ("Fire1") && Time.time > nextFire) {
+			nextFire = Time.time + fireRate;
+			Instantiate (bullet, shotSpawn.position, shotSpawn.rotation);
+		}
+	}
+
 
 	IEnumerator JumpWait(){
 		yield return new WaitForSeconds(jumpTime);
