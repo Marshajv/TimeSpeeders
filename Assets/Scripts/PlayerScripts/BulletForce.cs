@@ -19,10 +19,4 @@ public class BulletForce : MonoBehaviour {
 		yield return new WaitForSeconds (destructionTime);
 		Destroy (gameObject);
 	}
-
-	void OnTriggerEnter(Collider other){
-		if (other.tag == "Enemy") {
-			other.gameObject.SetActive (false);
-		}
-	}
 }

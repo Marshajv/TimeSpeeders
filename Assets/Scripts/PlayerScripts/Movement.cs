@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour {
 	
 	}
 	void Update () {
-        ConstantMovement();
+        //ConstantMovement();
 		Jump();
 		Shooting ();
 	    //float translationV=Input.GetAxis("Vertical") * speed * Time.deltaTime;
@@ -43,10 +43,10 @@ public class Movement : MonoBehaviour {
         transform.position = new Vector3((Mathf.Clamp(transform.position.x, clampPositionYMin, clampPositionYMax)), transform.position.y, (Mathf.Clamp(transform.position.z, clampPositionZMin, clampPositionZMax)));
 	}
 
-    void ConstantMovement(){
-        //print(myRigidbody.velocity.x);
-        myRigidbody.velocity = new Vector3(0, myRigidbody.velocity.x, constSpeed);
-    }
+    //void ConstantMovement(){
+    //    //print(myRigidbody.velocity.x);
+    //    myRigidbody.velocity = new Vector3(0, myRigidbody.velocity.x, constSpeed);
+    //}
 
 	public void Jump(){
 		if (Input.GetButtonDown ("Jump") && isGrounded==true) {
@@ -59,10 +59,8 @@ public class Movement : MonoBehaviour {
 	public void Shooting(){
 		if (Input.GetButtonDown ("Fire1") && Time.time > nextFire) {
 			nextFire = Time.time + fireRate;
-			Instantiate (bullet, shotSpawn.position, shotSpawn.rotation);
 		}
 	}
-
 
 	IEnumerator JumpWait(){
 		yield return new WaitForSeconds(jumpTime);

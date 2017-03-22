@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HealthScript : MonoBehaviour {
+public class ScrollingTexture : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
