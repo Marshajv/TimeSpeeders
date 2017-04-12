@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: 541b3f456eb07734a87f24232d0f62ed
+timeCreated: 1492035037
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Island
+    100002: Palm Leaf017
+    100004: Palm Leaf017 1
+    100006: Palm Leaf018
+    100008: Palm Leaf019
+    100010: Palm Leaf020
+    100012: Palm Leaf021
+    100014: Palm Leaf022
+    100016: Palm Leaf023
+    100018: Palm Leaf024
+    100020: Palm Leaf025
+    100022: Palm Leaf026
+    100024: Palm Leaf027
+    100026: Palm Leaf028
+    100028: Palm Leaf029
+    100030: Palm Leaf030
+    100032: Palm Leaf031
+    100034: Palm Leaf032
+    100036: //RootNode
+    100038: Tree004
+    100040: Tree005
+    100042: Tree006
+    400000: Island
+    400002: Palm Leaf017
+    400004: Palm Leaf017 1
+    400006: Palm Leaf018
+    400008: Palm Leaf019
+    400010: Palm Leaf020
+    400012: Palm Leaf021
+    400014: Palm Leaf022
+    400016: Palm Leaf023
+    400018: Palm Leaf024
+    400020: Palm Leaf025
+    400022: Palm Leaf026
+    400024: Palm Leaf027
+    400026: Palm Leaf028
+    400028: Palm Leaf029
+    400030: Palm Leaf030
+    400032: Palm Leaf031
+    400034: Palm Leaf032
+    400036: //RootNode
+    400038: Tree004
+    400040: Tree005
+    400042: Tree006
+    2300000: Island
+    2300002: Palm Leaf017
+    2300004: Palm Leaf017 1
+    2300006: Palm Leaf018
+    2300008: Palm Leaf019
+    2300010: Palm Leaf020
+    2300012: Palm Leaf021
+    2300014: Palm Leaf022
+    2300016: Palm Leaf023
+    2300018: Palm Leaf024
+    2300020: Palm Leaf025
+    2300022: Palm Leaf026
+    2300024: Palm Leaf027
+    2300026: Palm Leaf028
+    2300028: Palm Leaf029
+    2300030: Palm Leaf030
+    2300032: Palm Leaf031
+    2300034: Palm Leaf032
+    2300036: Tree004
+    2300038: Tree005
+    2300040: Tree006
+    3300000: Island
+    3300002: Palm Leaf017
+    3300004: Palm Leaf017 1
+    3300006: Palm Leaf018
+    3300008: Palm Leaf019
+    3300010: Palm Leaf020
+    3300012: Palm Leaf021
+    3300014: Palm Leaf022
+    3300016: Palm Leaf023
+    3300018: Palm Leaf024
+    3300020: Palm Leaf025
+    3300022: Palm Leaf026
+    3300024: Palm Leaf027
+    3300026: Palm Leaf028
+    3300028: Palm Leaf029
+    3300030: Palm Leaf030
+    3300032: Palm Leaf031
+    3300034: Palm Leaf032
+    3300036: Tree004
+    3300038: Tree005
+    3300040: Tree006
+    4300000: Island
+    4300002: Tree004
+    4300004: Palm Leaf017
+    4300006: Palm Leaf017
+    4300008: Palm Leaf018
+    4300010: Palm Leaf019
+    4300012: Palm Leaf020
+    4300014: Palm Leaf021
+    4300016: Palm Leaf022
+    4300018: Tree005
+    4300020: Palm Leaf023
+    4300022: Palm Leaf024
+    4300024: Palm Leaf025
+    4300026: Palm Leaf026
+    4300028: Palm Leaf027
+    4300030: Tree006
+    4300032: Palm Leaf028
+    4300034: Palm Leaf029
+    4300036: Palm Leaf030
+    4300038: Palm Leaf031
+    4300040: Palm Leaf032
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
