@@ -50,9 +50,19 @@ public class CollisionController : MonoBehaviour {
             scoreCurrent += coinValue;// this will increment the current score by the value of the given object
         }
 
-        if(collision.GetComponent<Collider>().gameObject.tag == "WaveBullet")
+        if(collision.GetComponent<Collider>().gameObject.tag == "Wave")
         {
             currentHealth = currentHealth - 10; //this should be a public int to have adjustable damage
+        }
+
+        if(collision.GetComponent<Collider>().gameObject.tag == "Siren")
+        {
+            currentHealth = currentHealth - 10;
+        }
+
+        if(collision.GetComponent<Collider>().gameObject.tag == "SirenAura")
+        {
+            currentHealth = currentHealth - 10;
         }
     }
 }

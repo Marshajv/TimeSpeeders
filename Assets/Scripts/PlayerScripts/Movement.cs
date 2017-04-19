@@ -5,48 +5,42 @@ public class Movement : MonoBehaviour {
     public float constSpeed;
     public float speed;
     public float rotationSpeed;
-	public float fireRate;
+    public float fireRate;
 
-	private float nextFire;
+    private float nextFire;
 
-	public Transform shotSpawn;
+    public Transform shotSpawn;
 
     public float clampPositionYMin;
     public float clampPositionYMax;
     public float clampPositionZMin;
     public float clampPositionZMax;
 
-	public float shotSpeed;
+    public float shotSpeed;
     public float jumpForce;
     public float jumpTime;
     public bool isGrounded;
+    bool inverted;
 
-	private GameObject bullet;
+    private GameObject bullet;
 
     public Rigidbody myRigidbody;
 
-	void Start () {
-	
-	}
-	void Update () {
-        //ConstantMovement();
-		Jump();
-		Shooting ();
-	    //float translationV=Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        float translationH = Input.GetAxis("Horizontal") * -speed * Time.deltaTime;
-        //  float rotation = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
+    void Start() {
 
-		transform.Translate (translationH, 0, 0);
-      // transform.Translate(translationH, translationV, 0);
-      //  transform.Rotate(0, 0, rotation);
+    }
+    void Update() {
+        //ConstantMovement();
+        regMovement();
+        Jump();
+        Shooting();
+    }
+    public void regMovement() {
+        float translationH = Input.GetAxis("Horizontal") * -speed * Time.deltaTime;
+        transform.Translate(translationH, 0, 0);
 
         transform.position = new Vector3((Mathf.Clamp(transform.position.x, clampPositionYMin, clampPositionYMax)), transform.position.y, (Mathf.Clamp(transform.position.z, clampPositionZMin, clampPositionZMax)));
-	}
-
-    //void ConstantMovement(){
-    //    //print(myRigidbody.velocity.x);
-    //    myRigidbody.velocity = new Vector3(0, myRigidbody.velocity.x, constSpeed);
-    //}
+    }
 
 	public void Jump(){
 		if (Input.GetButtonDown ("Jump") && isGrounded==true) {
