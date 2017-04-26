@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SirenBehavior : MonoBehaviour {
-    private float sirenCurHealth;
-    public float sirenMaxHealth;
+public class SharkBehavior : MonoBehaviour {
+    private float sharkCurHealth;
+    public float sharkMaxHealth;
     public float playerHit;
 
     bool isDead = false;
 
+    // Use this for initialization
     void Start () {
-        sirenCurHealth = sirenMaxHealth;
+        sharkCurHealth = sharkMaxHealth;
     }
 	
 	// Update is called once per frame
@@ -21,18 +22,19 @@ public class SirenBehavior : MonoBehaviour {
     {
         if (collision.GetComponent<Collider>().gameObject.tag == "Bullet")
         {
-            sirenCurHealth = sirenCurHealth - playerHit;
+            sharkCurHealth = sharkCurHealth - playerHit;
 
         }
     }
-     void EnemyDead()
+
+    void EnemyDead()
     {
-        if (sirenCurHealth <= 0)
+        if (sharkCurHealth <= 0)
         {
             //  Destroy(gameObject);
-            //  isDead = true;
+            // isDead = true;
             Respawn();
-            sirenCurHealth = sirenMaxHealth;
+            sharkCurHealth = sharkMaxHealth;
         }
     }
 

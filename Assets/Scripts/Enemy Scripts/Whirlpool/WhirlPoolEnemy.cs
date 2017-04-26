@@ -43,7 +43,9 @@ public class WhirlPoolEnemy : MonoBehaviour
     {
         if (waveCurHealth <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            Respawn();
+            waveCurHealth = waveMaxHealth;
         }
     }
 
@@ -69,5 +71,10 @@ public class WhirlPoolEnemy : MonoBehaviour
         yield return new WaitForSeconds(waitWave);
         Shooting();
         fired = false;
+    }
+
+    void Respawn()
+    {
+        transform.position = new Vector3(Random.Range(-6, 6), 0.68f, Random.Range(-50, -35));
     }
 }

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CollisionController : MonoBehaviour {
     public float maxHealth;
@@ -32,7 +33,7 @@ public class CollisionController : MonoBehaviour {
 
         if(currentHealth <= 0)
         {
-            //Die
+            SceneManager.LoadScene("Menu");
         }
 
         //add score counter here
@@ -61,6 +62,11 @@ public class CollisionController : MonoBehaviour {
         }
 
         if(collision.GetComponent<Collider>().gameObject.tag == "SirenAura")
+        {
+            currentHealth = currentHealth - 10;
+        }
+
+        if (collision.GetComponent<Collider>().gameObject.tag == "SharkAttack")
         {
             currentHealth = currentHealth - 10;
         }
