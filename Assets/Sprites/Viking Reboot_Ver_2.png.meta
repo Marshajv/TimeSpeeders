@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 35ee0f6b3acfb334f89a3ba84cfaa2d4
-timeCreated: 1492619836
+guid: 2d46387fcb334bd45bbd53d053fc1d27
+timeCreated: 1493224845
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Siren Idle Sprite 1
-    21300002: Siren Idle Sprite 2
-    21300004: Siren Idle Sprite 3
-    21300006: Siren Idle Sprite 4
+    21300000: VikingIdle1
+    21300002: VikingIdle2
+    21300004: VikingIdle3
+    21300006: VikingIdle4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,10 +30,10 @@ TextureImporter:
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -3
-  maxTextureSize: 1024
+  textureFormat: -1
+  maxTextureSize: 2048
   textureSettings:
-    filterMode: 1
+    filterMode: -1
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -52,57 +52,62 @@ TextureImporter:
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  buildTargetSettings:
+  - buildTarget: Standalone
+    maxTextureSize: 1024
+    textureFormat: -3
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Siren Idle Sprite 1
+      name: VikingIdle1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 60
-        height: 62
+        x: 8
+        y: 12
+        width: 48
+        height: 86
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Siren Idle Sprite 2
+      name: VikingIdle2
       rect:
         serializedVersion: 2
-        x: 66
-        y: 0
-        width: 59
-        height: 61
+        x: 73
+        y: 12
+        width: 48
+        height: 87
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Siren Idle Sprite 3
+      name: VikingIdle3
       rect:
         serializedVersion: 2
-        x: 131
-        y: 0
-        width: 60
-        height: 61
+        x: 133
+        y: 12
+        width: 50
+        height: 86
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Siren Idle Sprite 4
+      name: VikingIdle4
       rect:
         serializedVersion: 2
-        x: 197
-        y: 0
-        width: 60
-        height: 63
+        x: 202
+        y: 11
+        width: 48
+        height: 87
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

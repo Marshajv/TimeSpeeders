@@ -70,5 +70,10 @@ public class CollisionController : MonoBehaviour {
         {
             currentHealth = currentHealth - 10;
         }
+
+        if (collision.GetComponent<Collider>().gameObject.tag == "Poop")
+        {
+            currentHealth = currentHealth - 10;
+        }
     }
 }

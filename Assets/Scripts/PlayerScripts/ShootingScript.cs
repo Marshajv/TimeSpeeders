@@ -24,8 +24,9 @@ public class ShootingScript : MonoBehaviour {
         if (Input.GetButtonDown("Fire1")){
             //  GameObject newBullet = Instantiate(bullet, shotOutput.transform.position, Quaternion.identity) as GameObject;//ignore this line
 			ShotWait ();
-			GameObject newBullet = Instantiate(bullet, shotOutput.transform.position, Quaternion.Euler(new Vector3(90, 270, 0))) as GameObject;
-			newBullet.GetComponent<Rigidbody>().AddForce(bullet.transform.right * -bulletSpeed);
+            //GameObject newBullet = Instantiate(bullet, shotOutput.transform.position, Quaternion.Euler(new Vector3(90, 270, 0))) as GameObject;
+            GameObject newBullet = Instantiate(bullet, shotOutput.transform.position, Quaternion.Euler(new Vector3(0, 270, 0))) as GameObject;
+            newBullet.GetComponent<Rigidbody>().AddForce(bullet.transform.right * -bulletSpeed);
             Destroy(newBullet, destroyTime);
        }
     }
