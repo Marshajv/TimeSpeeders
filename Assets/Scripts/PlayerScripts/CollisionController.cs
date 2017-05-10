@@ -75,5 +75,9 @@ public class CollisionController : MonoBehaviour {
         {
             currentHealth = currentHealth - 10;
         }
+        if (collision.GetComponent<Collider>().gameObject.tag == "FireBall")
+        {
+            currentHealth = currentHealth - 5;
+        }
     }
 }
