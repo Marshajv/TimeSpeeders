@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ShootingScript : MonoBehaviour {
     public float shotSpeed;
@@ -10,9 +11,51 @@ public class ShootingScript : MonoBehaviour {
 
     public GameObject shotOutput;
     public GameObject bullet;
+	//public Image bulletIcon;
 
-	void Start () {
-	
+	private float shotSpeedOrg;
+	private float bulletSpeedOrg;
+	private float destroyTimeOrg;
+	private float waitBulletOrg;
+
+	private GameObject shotOutputOrg;
+	private GameObject bulletOrg;
+	//public Image bulletIconOrg;
+
+	void Start ()
+	{
+		shotSpeedOrg = shotSpeed;
+		bulletSpeedOrg = bulletSpeed;
+		destroyTimeOrg = destroyTime;
+		waitBulletOrg = waitBullet;
+		shotOutputOrg = shotOutput;
+		bulletOrg = bullet;
+		//bulletIcon = bulletIconOrg;
+	}
+
+	public void UpdateWeapon(float speedP, float bulletSpeedP, float waitBulletP, GameObject shotOutputP, GameObject bulletP) //Image bulletIconP
+	{
+		shotSpeed = speedP;
+		bulletSpeed = bulletSpeedP;
+		waitBullet = waitBulletP;
+		shotOutput = shotOutputP;
+		bullet = bulletP;
+		//bulletIcon = bulletIconP;
+
+		StartCoroutine (RevertWeapon());
+	}
+
+	IEnumerator RevertWeapon()
+	{
+		yield return new WaitForSeconds (10);
+
+		shotSpeed = shotSpeedOrg;
+		bulletSpeed = bulletSpeedOrg;
+		destroyTime = destroyTimeOrg;
+		waitBullet = waitBulletOrg;
+		shotOutput = shotOutputOrg;
+		bullet = bulletOrg;
+		//bulletIcon = bulletIconOrg;
 	}
 
 	void Update () {
