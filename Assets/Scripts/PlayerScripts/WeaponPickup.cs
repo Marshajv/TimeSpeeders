@@ -28,7 +28,7 @@ public class WeaponPickup : MonoBehaviour {
 	{
 		shooting = GameObject.FindGameObjectWithTag ("ShotOutput").GetComponent<ShootingScript> ();
 	}
-	void OnTriggerEnter2D()
+	void OnTriggerEnter(Collider collision)
 	{
 		int check = Random.Range (0, 1);
 		print ("check = " + check);
@@ -42,6 +42,6 @@ public class WeaponPickup : MonoBehaviour {
 			shooting.UpdateWeapon (BowshotSpeed, BowbulletSpeed, BowwaitBullet, BowshotOutput, Bowbullet); //Bowicon
 		}
 
-		Destroy (this.gameObject);
+		//Destroy (this.gameObject);
 	}
 }
