@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class WeaponPickup : MonoBehaviour {
 
+//	public float EndWeapon;
+
 	public float JavelinshotSpeed;
 	public float JavelinbulletSpeed;
 	public float JavelindestroyTime;
@@ -28,20 +30,27 @@ public class WeaponPickup : MonoBehaviour {
 	{
 		shooting = GameObject.FindGameObjectWithTag ("ShotOutput").GetComponent<ShootingScript> ();
 	}
+
+//	IEnumerator WeaponSwitch()
+//	{
+//		yield return new WaitForSeconds (10);
+//		shooting.UpdateWeapon ();
+//	}
+
 	void OnTriggerEnter(Collider collision)
-	{
-		int check = Random.Range (0, 1);
-		print ("check = " + check);
-		if (check == 0)
-		{
-			shooting.UpdateWeapon (JavelinshotSpeed, JavelinbulletSpeed, JavelinwaitBullet, JavelinshotOutput, Javelinbullet); //Javelinicon
-		}
+	{	
+		if (collision.GetComponent<Collider> ().gameObject.tag == "Player") {
+			int check = Random.Range (0, 1);
+			print ("check = " + check);
 
-		if (check == 1)
-		{
-			shooting.UpdateWeapon (BowshotSpeed, BowbulletSpeed, BowwaitBullet, BowshotOutput, Bowbullet); //Bowicon
-		}
+			if (check == 0) {
+				shooting.UpdateWeapon (JavelinshotSpeed, JavelinbulletSpeed, JavelinwaitBullet, JavelinshotOutput, Javelinbullet); //Javelinicon
+			}
 
+			if (check == 1) {
+				shooting.UpdateWeapon (BowshotSpeed, BowbulletSpeed, BowwaitBullet, BowshotOutput, Bowbullet); //Bowicon
+			}
+		}
 		//Destroy (this.gameObject);
 	}
 }

@@ -20,7 +20,7 @@ public class ShootingScript : MonoBehaviour {
 
 	private GameObject shotOutputOrg;
 	private GameObject bulletOrg;
-	//public Image bulletIconOrg;
+	//private Image bulletIconOrg;
 
 	void Start ()
 	{

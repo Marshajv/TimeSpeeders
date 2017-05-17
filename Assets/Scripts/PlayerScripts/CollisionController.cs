@@ -79,5 +79,9 @@ public class CollisionController : MonoBehaviour {
         {
             currentHealth = currentHealth - 5;
         }
+		if (collision.GetComponent<Collider> ().gameObject.tag == "HealthPickup")
+		{
+			currentHealth = currentHealth + 10;
+		}
     }
 }

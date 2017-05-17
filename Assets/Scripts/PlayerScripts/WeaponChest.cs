@@ -8,7 +8,7 @@ public class WeaponChest : MonoBehaviour {
 	private float obstacleSpeed;
 	public float minSpeed;
 	public float maxSpeed;
-	public Animator weaponChest;
+	//public Animator weaponChest;
 
 	// Use this for initialization
 	void Start()
@@ -32,8 +32,8 @@ public class WeaponChest : MonoBehaviour {
 	{
 		if (collision.GetComponent<Collider>().gameObject.tag == "Player") {
 			print ("hit");
-			GetComponent<Animator>().Play("weaponChest");
-			//GetComponent<Animation> ().Play();
+			//GetComponent<Animator>().SetTrigger(???);
+			//GetComponent<Animation> ().Play("weaponChest");
 			GetComponent<AudioSource>().Play();
 			//Destroy (this.gameObject, 11);
 			Respawn ();
